@@ -123,7 +123,6 @@ class Helper {
             },
           }),
         )
-      // break
       default:
         return res.status(statusCodeHttp).send(payload)
     }
