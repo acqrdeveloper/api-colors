@@ -33,7 +33,7 @@ class ColorsController {
    * @param res
    * @return {Promise<*>}
    */
-  static async createColor(req, res){
+  static async createColor(req, res) {
     const method = '[ColorsController.createColor]'
 
     try {
@@ -56,7 +56,7 @@ class ColorsController {
    * @param res
    * @return {Promise<*>}
    */
-  static async updateColor(req, res){
+  static async updateColor(req, res) {
     const method = '[ColorsController.updateColor]'
 
     try {

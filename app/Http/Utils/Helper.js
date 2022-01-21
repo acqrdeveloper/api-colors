@@ -1,5 +1,7 @@
 'use strict'
 
+const o2x = require('object-to-xml')
+
 class Helper {
   /**
    * Respuesta mixta express
@@ -110,7 +112,25 @@ class Helper {
     }
 
     // Return response express
-    return res.status(statusCodeHttp).send(payload)
+    // res.send(xml(name_of_restaurants));
+    switch (req.query.format) {
+      case 'xml':
+        res.type('application/xml')
+        return res.status(statusCodeHttp).send(
+          o2x({
+            '?xml version="1.0" encoding="utf-8"?': null,
+            colores: {
+              color: payload.result,
+            },
+          }),
+        )
+      // break
+      default:
+        return res.status(statusCodeHttp).send(payload)
+      // break
+    }
+    // return res.status(statusCodeHttp).send()
+    // return res.status(statusCodeHttp).send(payload.result)
   }
 }
 
