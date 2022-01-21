@@ -4,7 +4,7 @@ const Color = require('app/Http/Models/Colors/Color')
 
 class ColorsService {
   /**
-   * Obtener lista de colores
+   * Obtener una lista de colores o un  solo color
    * @return {Promise<{message: string, result: *}>}
    */
   static async getColors({ colorId }) {
