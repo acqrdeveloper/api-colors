@@ -112,14 +112,13 @@ class Helper {
     }
 
     // Return response express
-    // res.send(xml(name_of_restaurants));
     switch (req.query.format) {
       case 'xml':
         res.type('application/xml')
         return res.status(statusCodeHttp).send(
           o2x({
             '?xml version="1.0" encoding="utf-8"?': null,
-            colores: {
+            colors: {
               color: payload.result,
             },
           }),
@@ -127,10 +126,7 @@ class Helper {
       // break
       default:
         return res.status(statusCodeHttp).send(payload)
-      // break
     }
-    // return res.status(statusCodeHttp).send()
-    // return res.status(statusCodeHttp).send(payload.result)
   }
 }
 
