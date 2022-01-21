@@ -49,6 +49,30 @@ class ColorsController {
       return Helper.response({ req, res }, { method, e })
     }
   }
+
+  /**
+   * Actualizar color
+   * @param req
+   * @param res
+   * @return {Promise<*>}
+   */
+  static async updateColor(req, res){
+    const method = '[ColorsController.updateColor]'
+
+    try {
+      // Request
+      const colorId = req.body.id
+      const payload = req.body
+
+      // Service
+      const response = await ColorsService.updateColor({ colorId, payload })
+
+      // Response
+      return Helper.response({ req, res }, { method, ...response })
+    } catch (e) {
+      return Helper.response({ req, res }, { method, e })
+    }
+  }
 }
 
 module.exports = ColorsController
