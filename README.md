@@ -26,3 +26,7 @@ pm2 start ecosystem.config.js --env production
 - nodejs
 - express
 - pm2
+
+## Screenshots
+Service nodejs running in PM2 <br/>
+![plot](./public/pm2_deployment.png)
