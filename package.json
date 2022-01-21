@@ -1,0 +1,39 @@
+{
+  "name": "api-colors",
+  "version": "1.0.0",
+  "description": "color API consumption for community manager tasks.",
+  "author": {
+    "name": "Alex Christian"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:acqrdeveloper/api-colors.git"
+  },
+  "private": true,
+  "scripts": {
+    "watch": "nodemon ./bootstrap/app.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "6.1.0",
+    "express": "~4.16.1",
+    "helmet": "^4.6.0",
+    "module-alias": "^2.2.2",
+    "pm2": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.2"
+  },
+  "engines": {
+    "node": ">= 14.x",
+    "npm": ">= 7.x"
+  },
+  "_moduleAliases": {
+    "app": "./app/",
+    "config": "./config/",
+    "routes": "./routes/",
+    "public": "./public/"
+  }
+}
