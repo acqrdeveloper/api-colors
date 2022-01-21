@@ -30,3 +30,9 @@ pm2 start ecosystem.config.js --env production
 ## Screenshots
 Service nodejs running in PM2 <br/>
 ![plot](./public/pm2_deployment.png)
+
+Web application nodejs deployed <br/>
+![plot](./public/app_deployment.png)
+
+Postman published <br/>
+![plot](./public/postman_published.png)
