@@ -117,7 +117,7 @@ class Helper {
         res.type('application/xml')
         return res.status(statusCodeHttp).send(
           o2x({
-            '?xml version="1.0" encoding="utf-8"?': null,
+            '?xml version="1.0" encoding="UTF-8"?': null,
             colors: {
               color: payload.result,
             },
