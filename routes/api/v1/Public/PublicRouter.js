@@ -1,10 +1,9 @@
 const router = require('express').Router()
+const ColorsController = require('app/Http/Controllers/Colors/ColorsController')
 
 /**
- * Tests
+ * Test colors
  */
-router.post('/test/public', (req, res, next) => {
-  return next()
-})
+router.get('/colores', ColorsController.getColors)
 
 module.exports = router
