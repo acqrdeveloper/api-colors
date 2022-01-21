@@ -7,11 +7,11 @@ module.exports = {
       error_file: './logs/error.log',
       out_file: './logs/access.log',
       env: {
-        PORT: 8090,
+        PORT: 8099,
         NODE_ENV: 'development',
       },
       env_production: {
-        PORT: 8090,
+        PORT: 8099,
         NODE_ENV: 'production',
       },
     },
