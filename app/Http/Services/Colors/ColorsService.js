@@ -78,6 +78,26 @@ class ColorsService {
       result: founded,
     }
   }
+
+  /**
+   * Eliminar color
+   * @param colorId
+   * @return {Promise<{message: string, result: *}>}
+   */
+  static async deleteColor({ colorId }) {
+    // Encontrar color
+    let foundedIndex = Color.findIndex((item) => item.id == colorId)
+    if (foundedIndex === null) throw new Error('Color not found')
+
+    // Eliminar elemento
+    Color.splice(foundedIndex, 1)
+
+    // Response
+    return {
+      message: 'deleted color',
+      result: colorId,
+    }
+  }
 }
 
 module.exports = ColorsService

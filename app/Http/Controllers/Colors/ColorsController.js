@@ -73,6 +73,29 @@ class ColorsController {
       return Helper.response({ req, res }, { method, e })
     }
   }
+
+  /**
+   * Eliminar color
+   * @param req
+   * @param res
+   * @return {Promise<*>}
+   */
+  static async deleteColor(req, res) {
+    const method = '[ColorsController.deleteColor]'
+
+    try {
+      // Request
+      const colorId = req.params.id
+
+      // Service
+      const response = await ColorsService.deleteColor({ colorId })
+
+      // Response
+      return Helper.response({ req, res }, { method, ...response })
+    } catch (e) {
+      return Helper.response({ req, res }, { method, e })
+    }
+  }
 }
 
 module.exports = ColorsController
