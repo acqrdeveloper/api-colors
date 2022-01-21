@@ -61,7 +61,7 @@ class ColorsController {
 
     try {
       // Request
-      const colorId = req.body.id
+      const colorId = req.params.id
       const payload = req.body
 
       // Service

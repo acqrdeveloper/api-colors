@@ -7,6 +7,6 @@ const ColorsController = require('app/Http/Controllers/Colors/ColorsController')
 router.get('/colores', ColorsController.getColors)
 router.get('/colores/:id', ColorsController.getColors)
 router.post('/colores', ColorsController.createColor)
-router.put('/colores', ColorsController.updateColor)
+router.put('/colores/:id', ColorsController.updateColor)
 
 module.exports = router
