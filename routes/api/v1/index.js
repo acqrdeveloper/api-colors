@@ -1,5 +1,4 @@
 // Middleware
-const { appClient } = require('routes/middleware')
 
 // Public Modules App
 const PublicRouter = require('routes/api/v1/Public/PublicRouter')

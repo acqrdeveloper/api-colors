@@ -5,7 +5,7 @@ const ColorsService = require('app/Http/Services/Colors/ColorsService')
 
 class ColorsController {
   /**
-   *
+   * Obtener lista de colores
    * @param req
    * @param res
    * @returns {Promise<*|boolean|void>}
@@ -15,12 +15,10 @@ class ColorsController {
 
     try {
       // Request
-      const {} = req.body
-      const {} = req.query
-      const {} = req.params
+      const colorId = req.params.id
 
       // Service
-      const response = await ColorsService.getColors({})
+      const response = await ColorsService.getColors({ colorId })
 
       // Response
       return Helper.response({ req, res }, { method, ...response })
