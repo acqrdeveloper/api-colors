@@ -1,10 +1,11 @@
 # api-colors
 Consumir API de colores para tareas de community manager.
 
-## Technologies
-- nodejs
-- express
-- pm2
+## Link API deployment
+https://devapi.tasks.pe:555/
+
+## Link POSTMAN published
+https://documenter.getpostman.com/view/3683906/UVXonZoV
 
 ## File .env
 Crea el archivo .env a partir del archivo .env.example
@@ -20,3 +21,8 @@ pm2 start ecosystem.config.js --env development
 // Enviroment production server
 pm2 start ecosystem.config.js --env production
 ```
+
+## Technologies
+- nodejs
+- express
+- pm2
