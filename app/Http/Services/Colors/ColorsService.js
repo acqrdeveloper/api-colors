@@ -13,6 +13,7 @@ class ColorsService {
     let message = null
 
     if (colorId) {
+      // Encontrar un solo color
       const founded = Color.find((item) => item.id == colorId)
       if (founded) {
         result = founded
@@ -21,6 +22,7 @@ class ColorsService {
       }
       message = 'single color'
     } else {
+      // Listar colores
       result = Color
       message = 'all colors'
     }
@@ -29,6 +31,22 @@ class ColorsService {
     return {
       message,
       result,
+    }
+  }
+
+  /**
+   * Crear color
+   * @param payload
+   * @return {Promise<{message: string, result: *}>}
+   */
+  static async createColor({ payload }) {
+    // Agregar objeto al arreglo de colores
+    Color.push(payload)
+
+    // Response
+    return {
+      message: 'created color',
+      result: payload,
     }
   }
 }

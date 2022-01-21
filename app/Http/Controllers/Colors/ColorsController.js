@@ -26,6 +26,29 @@ class ColorsController {
       return Helper.response({ req, res }, { method, e })
     }
   }
+
+  /**
+   * Crear color
+   * @param req
+   * @param res
+   * @return {Promise<*>}
+   */
+  static async createColor(req, res){
+    const method = '[ColorsController.createColor]'
+
+    try {
+      // Request
+      const payload = req.body
+
+      // Service
+      const response = await ColorsService.createColor({ payload })
+
+      // Response
+      return Helper.response({ req, res }, { method, ...response })
+    } catch (e) {
+      return Helper.response({ req, res }, { method, e })
+    }
+  }
 }
 
 module.exports = ColorsController
