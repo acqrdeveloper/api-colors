@@ -1,5 +1,13 @@
 # api-colors
-color API consumption for community manager tasks.
+Consumir API de colores para tareas de community manager.
+
+## Technologies
+- nodejs
+- express
+- pm2
+
+## File .env
+Crea el archivo .env a partir del archivo .env.example
 
 ## Deployment
 ```bash
