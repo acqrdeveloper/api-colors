@@ -26,6 +26,7 @@ pm2 start ecosystem.config.js --env production
 - nodejs
 - express
 - pm2
+- object-to-xml
 
 ## Screenshots
 Service nodejs running in PM2 <br/>
@@ -36,3 +37,6 @@ Web application nodejs deployed <br/>
 
 Postman published <br/>
 ![plot](./public/postman_published.png)
+
+Unit tests funtional <br/>
+![plot](./public/unit_tests.png)

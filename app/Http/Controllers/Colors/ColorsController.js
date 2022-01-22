@@ -1,7 +1,7 @@
 'use strict'
 
-const Helper = require('app/Http/Utils/Helper')
-const ColorsService = require('app/Http/Services/Colors/ColorsService')
+const Helper = require('../../../../app/Http/Utils/Helper')
+const ColorsService = require('../../../../app/Http/Services/Colors/ColorsService')
 
 class ColorsController {
   /**
