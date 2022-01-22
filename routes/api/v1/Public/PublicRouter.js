@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const ColorsController = require('../../../../app/Http/Controllers/Colors/ColorsController')
+const ColorsController = require('app/Http/Controllers/Colors/ColorsController')
 
 /**
  * Test colors

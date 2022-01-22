@@ -12,8 +12,8 @@ const app = express()
 /**
  * Middleware
  */
-// require('config/helmet')(app)
-// require('config/cors')(app)
+require('config/helmet')(app)
+require('config/cors')(app)
 app.set('trust proxy', true)
 app.use(express.json({ limit: '2mb' }))
 app.use(express.urlencoded({ extended: true, limit: '2mb' }))
@@ -22,13 +22,7 @@ app.use(express.static('public'))
 /**
  * Router
  */
-// require('routes/api/v1')(app)
-// Public Modules App
-const PublicRouter = require('../routes/api/v1/Public/PublicRouter')
-
-// Version
-const version = `/api/v1`
-app.use(version, [PublicRouter])
+require('routes/api/v1')(app)
 
 /**
  * Listen port

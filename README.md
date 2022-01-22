@@ -27,6 +27,8 @@ pm2 start ecosystem.config.js --env production
 - express
 - pm2
 - object-to-xml
+- jest
+- supertest
 
 ## Screenshots
 Service nodejs running in PM2 <br/>

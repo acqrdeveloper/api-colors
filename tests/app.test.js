@@ -1,13 +1,13 @@
 'use strict'
 
-const app = require('../bootstrap/app.js')
-const request = require('supertest')
+const app = require('../bootstrap/app')
+const request = require('supertest')(app)
 
 /**
  * Test para obtener una lista de colores
  */
 test('all colors', async () => {
-  const res = await request(app).get('/api/v1/colores')
+  const res = await request.get('/api/v1/colores')
   expect(res.status).toBe(200)
   expect.objectContaining({
     code: expect.any(Number),
@@ -27,7 +27,7 @@ test('single color', async () => {
   const colorId = 1
 
   // API
-  const res = await request(app).get(`/api/v1/colores/${colorId}`)
+  const res = await request.get(`/api/v1/colores/${colorId}`)
 
   // Test
   expect(res.status).toBe(200)
@@ -49,7 +49,7 @@ test('create color', async () => {
   const payload = { id: 15, name: 'plateado', year: 2000, color: '#98B2D1', pantone_value: '15-4020' }
 
   // API
-  const res = await request(app).post('/api/v1/colores').send(payload)
+  const res = await request.post('/api/v1/colores').send(payload)
 
   // Test
   expect(res.status).toBe(200)
@@ -72,7 +72,7 @@ test('update color', async () => {
   const payload = { id: 1, name: 'ceruleanssss', year: 2000, color: '#98B2D1', pantone_value: '15-4020' }
 
   // API
-  const res = await request(app).put(`/api/v1/colores/${colorId}`).send(payload)
+  const res = await request.put(`/api/v1/colores/${colorId}`).send(payload)
 
   // Test
   expect(res.status).toBe(200)
@@ -94,7 +94,7 @@ test('delete color', async () => {
   const colorId = 1
 
   // API
-  const res = await request(app).delete(`/api/v1/colores/${colorId}`)
+  const res = await request.delete(`/api/v1/colores/${colorId}`)
 
   // Test
   expect(res.status).toBe(200)

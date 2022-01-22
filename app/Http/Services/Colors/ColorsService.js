@@ -1,6 +1,6 @@
 'use strict'
 
-const Color = require('../../../../app/Http/Models/Colors/Color')
+const Color = require('app/Http/Models/Colors/Color')
 
 class ColorsService {
   /**
